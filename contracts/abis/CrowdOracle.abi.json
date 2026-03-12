@@ -1,0 +1,204 @@
+{
+    "functions": [
+        {
+            "name": "createOracle",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "questionHash",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "deadline",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "oracleId",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "vote",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "oracleId",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "choice",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "amount",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "staked",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "resolveOracle",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "oracleId",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "result",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "outcome",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "claimReward",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "oracleId",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "reward",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "getOracleCount",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "count",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "getOracle",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "oracleId",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "questionHash",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "deadline",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "resolved",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "result",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "totalYes",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "totalNo",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "oracleId",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "getUserVote",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "oracleId",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "user",
+                    "type": "ADDRESS"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "exists",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "choice",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "amount",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "claimed",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "getUserClaimed",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "oracleId",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "user",
+                    "type": "ADDRESS"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "claimed",
+                    "type": "UINT256"
+                }
+            ]
+        }
+    ],
+    "events": []
+}
